@@ -65,7 +65,7 @@ const Ambulance = () => {
       <div className="max-w-[1220px] mx-auto flex flex-col md:flex-row items-center py-20 px-6 gap-10">
         <div className="flex-1 flex flex-col justify-center">
           <h1 className="text-4xl md:text-5xl font-extrabold text-red-600 mb-6 leading-tight">
-            Tez yordam <span className="text-blue-600">bir tugmada</span>
+            Tez yordam <span className="text-blue-600">ikki tugmada</span>
           </h1>
 
           <p className="text-gray-700 mb-8 text-lg md:text-xl leading-relaxed">
