@@ -1,3 +1,4 @@
+// demoClinics.js
 export const demoClinics = [
   {
     id: 1,
@@ -8,9 +9,66 @@ export const demoClinics = [
     hours: "09:00 - 18:00",
     rating: 4.8,
     price: "150,000",
+    avgPrice: "150,000",
     distance: "2.3 km",
     address: "Tashkent, Amir Temur ko'chasi 12",
     phone: "+998 71 123 45 67",
+    image: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3",
+    description: "City Clinic - Toshkent shahrining eng yirik va zamonaviy tibbiy markazlaridan biri. Bizning klinikamiz 20 yildan ortiq tajribaga ega bo'lib, bemorlarga yuqori sifatli tibbiy xizmatlarni taqdim etadi. 200 dan ortiq malakali shifokorlar, zamonaviy diagnostika uskunalari va qulay sharoitlar.",
+    services: ["Umumiy tekshiruv", "Laboratoriya tadqiqotlari", "USG", "Rentgen", "Fizioterapiya", "Stomatologiya", "Pediatriya", "Ginekologiya"],
+    callCenter: ["1080", "1120", "+998 71 123 45 67"],
+    doctors: [
+      { 
+        id: 101, 
+        name: "Dr. Alisher Rahimov", 
+        specialization: "Terapevt",
+        rating: 4.9,
+        experience: "12 yil",
+        avatar: "👨‍⚕️",
+        price: "120,000",
+        image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d"
+      },
+      { 
+        id: 102, 
+        name: "Dr. Zulfiya Karimova", 
+        specialization: "Kardiolog",
+        rating: 4.8,
+        experience: "15 yil",
+        avatar: "👩‍⚕️",
+        price: "180,000",
+        image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2"
+      },
+      { 
+        id: 103, 
+        name: "Dr. Shohruh To'rayev", 
+        specialization: "Nevrolog",
+        rating: 4.7,
+        experience: "10 yil",
+        avatar: "👨‍⚕️",
+        price: "160,000",
+        image: "https://images.unsplash.com/photo-1537368910025-700350fe46c7"
+      }
+    ],
+    reviews: [
+      { 
+        name: "Ali Valiyev", 
+        rating: 5, 
+        text: "Ajoyib xizmat! Shifokorlar juda malakali va bemorlarga diqqat bilan qarashadi. Klinikada hamma narsa tashkil etilgan.",
+        date: "2024-03-15"
+      },
+      { 
+        name: "Dilnoza Xodjayeva", 
+        rating: 4, 
+        text: "Klinika jihozlari zamonaviy, xodimlar mehmondo'st. Narxlar biroz yuqori, lekin sifat uchun bunga arziydi.",
+        date: "2024-03-10"
+      },
+      { 
+        name: "Javohir Ismoilov", 
+        rating: 5, 
+        text: "O'g'limni davolatdik, juda yaxshi natijalar oldik. Barcha xodimlarga rahmat!",
+        date: "2024-03-05"
+      }
+    ]
   },
   {
     id: 2,
@@ -22,6 +80,49 @@ export const demoClinics = [
     rating: 4.9,
     price: "200,000",
     distance: "1.5 km",
+    image: "https://images.unsplash.com/photo-1537368910025-700350fe46c7",
+    bio: "Samad Karimov - yuqori toifali kardiolog, 15 yillik tajribaga ega. Amerika va Germaniyada malaka oshirgan. Yuqori qon bosimi, yurak etishmovchiligi va aritmiya kasalliklarini davolash bo'yicha mutaxassis. 10 dan ortiq ilmiy maqolalar muallifi, xalqaro konferensiyalarda ishtirok etadi.",
+    schedule: "Dushanba - Juma / 09:00 – 17:00",
+    phone: "+998 90 123 45 67",
+    certificates: [
+      "Amerika Kardiologiya Assotsiatsiyasi sertifikati (2018)",
+      "Germaniya Tibbiyot Akademiyasi (2020)",
+      "Xalqaro Kardiologiya Kongressi (2022)",
+      "Evropa Kardiologiya Jamiyati a'zosi (2021)",
+      "Pediatrik Kardiologiya ixtisosligi (2019)"
+    ],
+    socials: {
+      telegram: "@drsamadkarimov",
+      instagram: "dr_samad_karimov",
+      linkedin: "samad-karimov-md"
+    },
+    patients: 2450,
+    education: "Toshkent Tibbiyot Akademiyasi, Kardiologiya fakulteti",
+    languages: ["O'zbek", "Rus", "Ingliz"],
+    reviews: [
+      { 
+        name: "Olimjon Sobirov", 
+        rating: 5, 
+        text: "Doktor Samad mening hayotimni saqlab qoldi. Yurak kasalligimni davoladi, hozir sog'lig'im yaxshi. Har bir tafsilotga e'tibor beradi.",
+        date: "2024-03-18"
+      },
+      { 
+        name: "Maftuna Abdullayeva", 
+        rating: 5, 
+        text: "Juda tajribali va sabrli shifokor. Har bir bemorga individual yondashadi. Maslahatlari juda foydali.",
+        date: "2024-03-12"
+      },
+      { 
+        name: "Bahrom Ismoilov", 
+        rating: 4, 
+        text: "Yaxshi mutaxassis, lekin qabulga kutish vaqti uzoq. Davolash natijalari juda yaxshi.",
+        date: "2024-03-05"
+      }
+    ],
+    clinic: {
+      name: "Heart Center",
+      id: 5
+    }
   },
   {
     id: 3,
@@ -51,9 +152,50 @@ export const demoClinics = [
     hours: "08:00 - 17:00",
     rating: 4.9,
     price: "250,000",
+    avgPrice: "250,000",
     distance: "4.2 km",
     address: "Tashkent, Mustaqillik 45",
     phone: "+998 71 234 56 78",
+    image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d",
+    description: "Heart Center - O'zbekistondagi eng yirik kardiologiya markazi. Biz yuqori qon bosimi, yurak etishmovchiligi, aritmiya va boshqa yurak-qon tomir kasalliklarini davolash bo'yicha ixtisoslashganmiz. Klinikamizda eng yangi diagnostika va davolash uskunalari mavjud.",
+    services: ["Kardiologik tekshiruv", "EKG", "Ekokardiyografiya", "Stress-test", "Kardioreabilitatsiya", "Yurak jarrohligi", "Angiografiya", "Holter monitoring"],
+    callCenter: ["1080", "1121", "+998 71 234 56 78"],
+    doctors: [
+      { 
+        id: 2, 
+        name: "Dr. Samad Karimov", 
+        specialization: "Kardiolog",
+        rating: 4.9,
+        experience: "15 yil",
+        avatar: "👨‍⚕️",
+        price: "200,000",
+        image: "https://images.unsplash.com/photo-1537368910025-700350fe46c7"
+      },
+      { 
+        id: 201, 
+        name: "Dr. Nodira Yusupova", 
+        specialization: "Kardiologiya jarrohi",
+        rating: 4.8,
+        experience: "18 yil",
+        avatar: "👩‍⚕️",
+        price: "300,000",
+        image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2"
+      }
+    ],
+    reviews: [
+      { 
+        name: "Ravshan Alimov", 
+        rating: 5, 
+        text: "Ota-onamning yurak muammolarini muvaffaqiyatli davoladilar. Rahmat! Mutaxassislar juda malakali.",
+        date: "2024-03-20"
+      },
+      { 
+        name: "Gulnora Karimova", 
+        rating: 5, 
+        text: "Zamonaviy uskunalar va yuqori malakali shifokorlar. Har qanday maslahat uchun murojaat qilaman.",
+        date: "2024-03-15"
+      }
+    ]
   },
   {
     id: 6,
@@ -65,134 +207,27 @@ export const demoClinics = [
     rating: 5.0,
     price: "180,000",
     distance: "2.8 km",
-  },
-  {
-    id: 7,
-    type: "clinic",
-    name: "Wellness Clinic",
-    logo: "🏥",
-    specialization: "Dermatologiya",
-    hours: "09:00 - 19:00",
-    rating: 4.6,
-    price: "180,000",
-    distance: "3.5 km",
-    address: "Tashkent, Mirzo Ulug‘bek 23",
-    phone: "+998 71 345 67 89",
-  },
-  {
-    id: 8,
-    type: "doctor",
-    name: "Dr. Rustam Tursunov",
-    avatar: "👨‍⚕️",
-    specialization: "Nevrolog",
-    experience: "12 yil",
-    rating: 4.7,
-    price: "220,000",
-    distance: "2.1 km",
-  },
-  {
-    id: 9,
-    type: "gym",
-    name: "PowerHouse Gym",
-    image: "🏋️",
-    trainings: ["Crossfit", "Gymnastics", "Weightlifting"],
-    monthlyPrice: "400,000",
-    rating: 4.9,
-    distance: "1.8 km",
-  },
-  {
-    id: 10,
-    type: "medicine",
-    name: "Ibuprofen 200mg",
-    image: "💊",
-    price: "15,000",
-    rating: 4.5,
-    stock: true,
-  },
-  {
-    id: 11,
-    type: "clinic",
-    name: "Smile Dental",
-    logo: "🦷",
-    specialization: "Stomatologiya",
-    hours: "10:00 - 20:00",
-    rating: 4.8,
-    price: "120,000",
-    distance: "2.0 km",
-    address: "Tashkent, Chilonzor 8",
-    phone: "+998 71 456 78 90",
-  },
-  {
-    id: 12,
-    type: "doctor",
-    name: "Dr. Nilufar Qodirova",
-    avatar: "👩‍⚕️",
-    specialization: "Ginekolog",
-    experience: "8 yil",
-    rating: 4.9,
-    price: "210,000",
-    distance: "3.2 km",
-  },
-  {
-    id: 13,
-    type: "gym",
-    name: "Yoga Bliss",
-    image: "🧘",
-    trainings: ["Yoga", "Meditatsiya", "Pilates"],
-    monthlyPrice: "320,000",
-    rating: 4.6,
-    distance: "4.0 km",
-  },
-  {
-    id: 14,
-    type: "medicine",
-    name: "Vitamin C 500mg",
-    image: "💊",
-    price: "25,000",
-    rating: 4.8,
-    stock: true,
-  },
-  {
-    id: 15,
-    type: "clinic",
-    name: "NeuroCare",
-    logo: "🧠",
-    specialization: "Nevrologiya",
-    hours: "09:00 - 18:00",
-    rating: 4.7,
-    price: "230,000",
-    distance: "5.1 km",
-    address: "Tashkent, Yunusobod 16",
-    phone: "+998 71 567 89 01",
-  },
-  {
-    id: 16,
-    type: "doctor",
-    name: "Dr. Javlonbek To‘xtayev",
-    avatar: "👨‍⚕️",
-    specialization: "Ortoped",
-    experience: "14 yil",
-    rating: 4.8,
-    price: "190,000",
-    distance: "3.0 km",
-  },
-  {
-    id: 17,
-    type: "gym",
-    name: "CrossFit Arena",
-    image: "🏋️",
-    trainings: ["Crossfit", "HIIT", "Strength"],
-    monthlyPrice: "420,000",
-    rating: 4.9,
-    distance: "2.5 km",
-  },
-  {
-    id: 18,
-    type: "medicine",
-    name: "Amoxicillin 500mg",
-    image: "💊",
-    price: "30,000",
-    rating: 4.6,
-    stock: true,
-  },
+    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2",
+    bio: "Maryam Azimova - bolalar shifokori, 10 yillik tajribaga ega. Bolalarning rivojlanishi, immunitet tizimi va turli bolalar kasalliklarini davolash bo'yicha mutaxassis.",
+    schedule: "Dushanba - Shanba / 08:00 – 16:00",
+    phone: "+998 90 987 65 43",
+    certificates: [
+      "Pediatriya ixtisosligi (2015)",
+      "Bolalar immunologi (2018)",
+      "Neonatologiya kursi (2020)"
+    ],
+    socials: {
+      telegram: "@drmaryamazimova",
+      instagram: "dr_maryam_azimova"
+    },
+    patients: 3200,
+    reviews: [
+      { 
+        name: "Sevinch Qodirova", 
+        rating: 5, 
+        text: "Farzandimni davolatdik, juda yaxshi munosabat. Bolalar bilan ishlashda ajoyib mahorat.",
+        date: "2024-03-22"
+      }
+    ]
+  }
 ];

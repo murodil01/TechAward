@@ -22,9 +22,14 @@ import Reports from "./pages/reports";
 import ClinicDetail from "./pages/clinic-details";
 import DoctorDetail from "./pages/doctor-details";
 
+// Scroll Top
+import ScrollTop from "./components/scroll-top";
+
 function App() {
   return (
     <div className="font-roboto">
+
+      <ScrollTop/>
 
       <Routes>
 
