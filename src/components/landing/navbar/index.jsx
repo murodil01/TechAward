@@ -7,8 +7,12 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
 
+  // const handleRegister = () => {
+  //   navigate("/register");
+  // };
+
   const handleRegister = () => {
-    navigate("/register");
+    navigate("https://clinic-go-d779cd58.base44.app/?is_new_user=true");
   };
 
   return (
