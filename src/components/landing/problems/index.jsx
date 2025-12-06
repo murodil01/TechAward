@@ -169,7 +169,7 @@ const Problems = () => {
           </p>
           <div className="flex flex-wrap justify-center gap-8 mt-8">
             <div className="text-center">
-              <div className="text-4xl font-bold mb-2">100K+</div>
+              <div className="text-4xl font-bold mb-2">10K+</div>
               <div className="text-blue-100">Foydalanuvchilar</div>
             </div>
             <div className="text-center">

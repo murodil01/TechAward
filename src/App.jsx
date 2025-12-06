@@ -12,11 +12,7 @@ import Footer from "./components/landing/footer";
 import Registration from "./components/landing/register";
 
 // CRM
-import Sidebar from "./components/crm/sideBar";
-import CRMNavbar from "./components/crm/CrmNavbar";
-import Dashboard from "./pages/dashboard";
-import Users from "./pages/users";
-import Reports from "./pages/reports";
+import CRMLayout from "./components/crm/layout";
 
 // Detail pages
 import ClinicDetail from "./pages/clinic-details";
@@ -28,8 +24,7 @@ import ScrollTop from "./components/scroll-top";
 function App() {
   return (
     <div className="font-roboto">
-
-      <ScrollTop/>
+      <ScrollTop />
 
       <Routes>
 
@@ -54,28 +49,13 @@ function App() {
         <Route path="/register" element={<Registration />} />
 
         {/* CRM */}
-        <Route
-          path="/crm"
-          element={
-            <div className="flex min-h-screen">
-              <Sidebar />
-              <div className="flex-1">
-                <CRMNavbar />
-                <Dashboard />
-              </div>
-            </div>
-          }
-        />
-
-        <Route path="/crm/users" element={<Users />} />
-        <Route path="/crm/reports" element={<Reports />} />
+        <Route path="/crm/*" element={<CRMLayout />} />
 
         {/* DETAIL PAGES */}
         <Route path="/clinic/:id" element={<ClinicDetail />} />
         <Route path="/doctor/:id" element={<DoctorDetail />} />
 
       </Routes>
-
     </div>
   );
 }

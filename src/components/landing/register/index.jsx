@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 
-const Registration = ({ onSubmit }) => {
+const Registration = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -13,7 +15,8 @@ const Registration = ({ onSubmit }) => {
     // Toast qo'shildi
     toast.success("Siz muvaffaqiyatli ro'yhatdan o'tdingiz!");
 
-    onSubmit(); // CRM sahifaga o'tish
+    // Ro'yhatdan o'tgandan so'ng CRM sahifaga yo'naltirish
+    navigate("/crm");
   };
 
   return (
