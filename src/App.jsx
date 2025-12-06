@@ -1,6 +1,7 @@
 import { useState } from "react";
 import LandingNavbar from "./components/landing/navbar";
 import Hero from "./components/landing/hero";
+import Ambulance from "./components/landing/ambulance"
 import About from "./components/landing/about";
 import Footer from "./components/landing/footer";
 import Registration from "./components/landing/register";
@@ -29,6 +30,7 @@ function App() {
         <>
           <LandingNavbar onRegister={() => setPage("registration")} />
           <Hero />
+          <Ambulance/>
           <About />
           <Doctors/>
           <Clinics />
