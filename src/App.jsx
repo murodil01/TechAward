@@ -9,6 +9,10 @@ import CRMNavbar from "./components/crm/CrmNavbar";
 import Dashboard from "./pages/dashboard";
 import Users from "./pages/users";
 import Reports from "./pages/reports";
+import Clinics from "./components/landing/clinics";
+import Doctors from "./components/landing/doctors";
+import Problems from "./components/landing/problems";
+import Modules from "./components/landing/modules";
 
 function App() {
   const [page, setPage] = useState("landing"); // landing, registration, crm
@@ -26,6 +30,10 @@ function App() {
           <LandingNavbar onRegister={() => setPage("registration")} />
           <Hero />
           <About />
+          <Doctors/>
+          <Clinics />
+          <Problems />
+          <Modules />
           <Footer />
         </>
       )}

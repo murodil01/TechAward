@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FiMenu, FiX } from "react-icons/fi"; // Menu ochish/close ikonlari
+import { FiMenu, FiX } from "react-icons/fi";
 import logo from "../../../assets/images/logo.png";
 
 const Navbar = ({ onRegister }) => {
@@ -8,11 +8,8 @@ const Navbar = ({ onRegister }) => {
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-[1220px] mx-auto flex justify-between items-center py-4 px-6">
-        
-        {/* Logo */}
         <img src={logo} alt="Logo" className="max-w-[100px] w-full h-auto"/>
 
-        {/* Desktop Menu */}
         <ul className="hidden md:flex gap-6 text-gray-700 font-medium">
           <li className="hover:text-red-600 cursor-pointer transition">Asosiy</li>
           <li className="hover:text-red-600 cursor-pointer transition">Qanday ishlaydi?</li>
@@ -20,7 +17,6 @@ const Navbar = ({ onRegister }) => {
           <li className="hover:text-red-600 cursor-pointer transition">Bog‘lanish</li>
         </ul>
 
-        {/* Desktop Button */}
         <button
           onClick={onRegister}
           className="hidden md:block bg-red-600 hover:bg-red-700 text-white font-semibold px-5 py-2 rounded-lg shadow-md transition"
@@ -28,7 +24,6 @@ const Navbar = ({ onRegister }) => {
           Ro'yxatdan o'tish
         </button>
 
-        {/* Mobile Menu Icon */}
         <div className="md:hidden flex items-center">
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -39,7 +34,6 @@ const Navbar = ({ onRegister }) => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-white shadow-md w-full absolute left-0 top-full">
           <ul className="flex flex-col gap-4 px-6 py-4 text-gray-700 font-medium">
