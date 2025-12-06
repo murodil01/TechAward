@@ -48,7 +48,7 @@ const CRMLayout = () => {
 
         {/* Page Content - scrollable area */}
         <main className="flex-1 overflow-y-auto bg-gray-100">
-          <div className="p-3 sm:p-4 md:p-6 lg:p-2">
+          <div className="p-3 sm:p-4 md:p-6 lg:p-4">
             <Routes>
               <Route path="/" element={<Dashboard />} />
               <Route path="/users" element={<Users />} />

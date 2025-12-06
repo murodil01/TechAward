@@ -14,13 +14,25 @@ const Navbar = () => {
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-[1220px] mx-auto flex justify-between items-center py-4 px-6">
-        <img src={logo} alt="Logo" className="max-w-[100px] w-full h-auto"/>
+        <img
+          src={logo}
+          alt="Logo"
+          className="w-20 sm:w-24 md:w-28 lg:w-32 h-auto"
+        />
 
         <ul className="hidden md:flex gap-6 text-gray-700 font-medium">
-          <li className="hover:text-red-600 cursor-pointer transition">Asosiy</li>
-          <li className="hover:text-red-600 cursor-pointer transition">Qanday ishlaydi?</li>
-          <li className="hover:text-red-600 cursor-pointer transition">AI tizim</li>
-          <li className="hover:text-red-600 cursor-pointer transition">Bog‘lanish</li>
+          <li className="hover:text-red-600 cursor-pointer transition">
+            Asosiy
+          </li>
+          <li className="hover:text-red-600 cursor-pointer transition">
+            Qanday ishlaydi?
+          </li>
+          <li className="hover:text-red-600 cursor-pointer transition">
+            AI tizim
+          </li>
+          <li className="hover:text-red-600 cursor-pointer transition">
+            Bog‘lanish
+          </li>
         </ul>
 
         <button
@@ -43,10 +55,18 @@ const Navbar = () => {
       {mobileMenuOpen && (
         <div className="md:hidden bg-white shadow-md w-full absolute left-0 top-full">
           <ul className="flex flex-col gap-4 px-6 py-4 text-gray-700 font-medium">
-            <li className="hover:text-red-600 cursor-pointer transition">Asosiy</li>
-            <li className="hover:text-red-600 cursor-pointer transition">Qanday ishlaydi?</li>
-            <li className="hover:text-red-600 cursor-pointer transition">AI tizim</li>
-            <li className="hover:text-red-600 cursor-pointer transition">Bog‘lanish</li>
+            <li className="hover:text-red-600 cursor-pointer transition">
+              Asosiy
+            </li>
+            <li className="hover:text-red-600 cursor-pointer transition">
+              Qanday ishlaydi?
+            </li>
+            <li className="hover:text-red-600 cursor-pointer transition">
+              AI tizim
+            </li>
+            <li className="hover:text-red-600 cursor-pointer transition">
+              Bog‘lanish
+            </li>
             <button
               onClick={handleRegister}
               className="bg-red-600 hover:bg-red-700 text-white font-semibold px-5 py-2 rounded-lg shadow-md transition mt-2"
