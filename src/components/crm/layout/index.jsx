@@ -14,20 +14,21 @@ const CRMLayout = () => {
   const getActiveSection = () => {
     if (location.pathname.includes("/users")) return "users";
     if (location.pathname.includes("/reports")) return "reports";
+    if (location.pathname.includes("/profile")) return "profile";
     return "dashboard";
   };
 
   return (
-    <div className="flex min-h-screen bg-gray-50">
-      {/* Mobile overlay */}
+    <div className="flex h-screen overflow-hidden bg-gray-50">
+      {/* Mobile overlay - faqat mobilda sidebar ochiq bo'lganda ko'rinadi */}
       {sidebarOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-60 z-40 md:hidden"
+          className="fixed inset-0 bg-black bg-opacity-60 z-40 md:hidden backdrop-blur-sm transition-opacity duration-300"
           onClick={() => setSidebarOpen(false)}
         />
       )}
 
-      {/* Sidebar */}
+      {/* Sidebar - fixed height, no scroll */}
       <div
         className={`fixed z-50 inset-y-0 left-0 w-64 transform 
           ${sidebarOpen ? "translate-x-0" : "-translate-x-full"} 
@@ -40,17 +41,21 @@ const CRMLayout = () => {
         />
       </div>
 
-      {/* Main Content */}
-      <div className="flex-1 flex flex-col min-w-0 w-full">
+      {/* Main Content Area - scrollable */}
+      <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
+        {/* Navbar - sticky */}
         <CRMNavbar onHamburgerClick={() => setSidebarOpen(!sidebarOpen)} />
 
-        <main className="flex-1 p-4 bg-gray-100 overflow-auto">
-          <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/users" element={<Users />} />
-            <Route path="/reports" element={<Reports />} />
-            <Route path="/profile" element={<Profile />} />
-          </Routes>
+        {/* Page Content - scrollable area */}
+        <main className="flex-1 overflow-y-auto bg-gray-100">
+          <div className="p-3 sm:p-4 md:p-6 lg:p-2">
+            <Routes>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/users" element={<Users />} />
+              <Route path="/reports" element={<Reports />} />
+              <Route path="/profile" element={<Profile />} />
+            </Routes>
+          </div>
         </main>
       </div>
     </div>
