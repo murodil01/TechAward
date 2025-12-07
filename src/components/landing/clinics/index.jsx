@@ -94,6 +94,7 @@ const Clinics = () => {
             <div className="flex flex-wrap gap-2 mb-3">
               {categoryOptions.map((option) => (
                 <button
+                  aria-label="label"
                   key={option.value}
                   onClick={() => setSelectedCategory(option.value)}
                   className={`px-5 py-4 rounded-lg text-sm font-medium transition-all ${
@@ -110,6 +111,7 @@ const Clinics = () => {
             {/* Filter Button */}
             <div className="flex justify-end">
               <button
+                aria-label="filter"
                 onClick={() => setShowFilter(!showFilter)}
                 className={`px-5 py-4 rounded-lg transition-all flex items-center gap-2 ${
                   showFilter
@@ -119,7 +121,7 @@ const Clinics = () => {
               >
                 <SlidersHorizontal className="w-5 h-5" />
                 <span className="text-sm font-medium hidden sm:inline">
-                  Filtr
+                  Filter
                 </span>
               </button>
             </div>
@@ -142,6 +144,7 @@ const Clinics = () => {
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-xl font-bold text-gray-900">Filtrlar</h2>
                 <button
+                  aria-label="close"
                   onClick={() => setShowFilter(false)}
                   className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
                 >
@@ -160,6 +163,7 @@ const Clinics = () => {
                       { value: "rating", label: "Reyting bo'yicha" },
                     ].map((option) => (
                       <button
+                        aria-label="label"
                         key={option.value}
                         onClick={() => setSortBy(option.value)}
                         className={`px-4 py-3 rounded-lg text-left font-medium transition-all ${
@@ -200,6 +204,7 @@ const Clinics = () => {
 
                 {/* Apply Button */}
                 <button
+                  aria-label="filter"
                   onClick={() => setShowFilter(false)}
                   className="w-full py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-colors shadow-md"
                 >
@@ -220,6 +225,7 @@ const Clinics = () => {
           </span>
           {(selectedCategory !== "all" || priceRange[1] < 500000 || search) && (
             <button
+              aria-label="clean"
               onClick={() => {
                 setSelectedCategory("all");
                 setPriceRange([0, 500000]);

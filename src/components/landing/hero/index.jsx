@@ -242,6 +242,7 @@ const Hero = () => {
         <div className="relative">
           {/* Navigation Buttons */}
           <button
+            aria-label="prev"
             onClick={handlePrev}
             className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-20 w-12 h-12 bg-white rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center group hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed"
             disabled={currentIndex === 0}
@@ -250,6 +251,7 @@ const Hero = () => {
           </button>
 
           <button
+            aria-label="next"
             onClick={handleNext}
             className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-20 w-12 h-12 bg-white rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center group hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed"
             disabled={currentIndex === totalPages - 1}
@@ -273,6 +275,7 @@ const Hero = () => {
         <div className="flex items-center justify-center gap-2 mt-12">
           {Array.from({ length: totalPages }).map((_, idx) => (
             <button
+              aria-label="dots"
               key={idx}
               onClick={() => {
                 setCurrentIndex(idx);

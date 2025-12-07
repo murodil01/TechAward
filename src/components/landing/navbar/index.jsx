@@ -19,6 +19,7 @@ const Navbar = () => {
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-[1220px] mx-auto flex justify-between items-center py-4 px-6">
         <img
+          loading="eager"
           src={logo}
           alt="Logo"
           className="w-20 sm:w-24 md:w-28 lg:w-32 h-auto"
@@ -40,6 +41,7 @@ const Navbar = () => {
         </ul>
 
         <button
+          aria-label="register"
           onClick={handleRegister}
           className="hidden md:block bg-red-600 hover:bg-red-700 text-white font-semibold px-5 py-2 rounded-lg shadow-md transition"
         >
@@ -48,6 +50,7 @@ const Navbar = () => {
 
         <div className="md:hidden flex items-center">
           <button
+            aria-label="menu"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="text-2xl text-gray-700"
           >
@@ -72,6 +75,7 @@ const Navbar = () => {
               Bog‘lanish
             </li>
             <button
+              aria-label="register"
               onClick={handleRegister}
               className="bg-red-600 hover:bg-red-700 text-white font-semibold px-5 py-2 rounded-lg shadow-md transition mt-2"
             >

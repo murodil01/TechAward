@@ -23,7 +23,7 @@ const GymCard = ({ gym }) => (
       </div>
       <div className="flex items-center justify-between">
         <span className="text-lg font-bold text-gray-900">{gym.monthlyPrice} so'm/oy</span>
-        <button className="px-4 py-2 bg-orange-600 text-white rounded-lg text-sm font-medium hover:bg-orange-700 transition-colors">
+        <button aria-label="join" className="px-4 py-2 bg-orange-600 text-white rounded-lg text-sm font-medium hover:bg-orange-700 transition-colors">
           A'zo bo'lish
         </button>
       </div>

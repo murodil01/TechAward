@@ -1,11 +1,16 @@
-import logo from "../../../assets/images/logo.png"
+import logo from "../../../assets/images/logo.png";
 
 const Footer = () => {
   return (
     <footer className="bg-gray-100 pt-16 pb-8">
       <div className="max-w-[1220px] mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
         <div>
-          <img src={logo} alt="Logo" className="max-w-[100px] w-full h-auto" />
+          <img
+            loading="loader"
+            src={logo}
+            alt="Logo"
+            className="max-w-[100px] w-full h-auto"
+          />
           <p className="text-gray-700">
             O‘zbekiston uchun innovatsion tez yordam platformasi.
           </p>

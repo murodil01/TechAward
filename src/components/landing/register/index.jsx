@@ -57,6 +57,7 @@ const Registration = () => {
         </div>
 
         <button
+          aria-label="submit"
           type="submit"
           className="w-full mt-6 bg-red-600 hover:bg-red-700 text-white font-semibold py-3 rounded-lg shadow-md transition"
         >
