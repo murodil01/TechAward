@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
-import logo from "../../../assets/images/logo.png";
+import logo from "../../../assets/images/logo.webp";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -19,10 +19,13 @@ const Navbar = () => {
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-[1220px] mx-auto flex justify-between items-center py-4 px-6">
         <img
-          loading="eager"
           src={logo}
-          alt="Logo"
-          className="w-20 sm:w-24 md:w-28 lg:w-32 h-auto"
+          alt="Clinic Go logo"
+          decoding="async"
+          fetchPriority="high"
+          width="128"
+          height="128"
+          className="w-20 sm:w-24 md:w-28 lg:w-32 h-auto object-contain"
         />
 
         <ul className="hidden md:flex gap-6 text-gray-700 font-medium">

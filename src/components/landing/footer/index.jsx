@@ -1,4 +1,4 @@
-import logo from "../../../assets/images/logo.png";
+import logo from "../../../assets/images/logo.webp";
 
 const Footer = () => {
   return (
@@ -6,11 +6,15 @@ const Footer = () => {
       <div className="max-w-[1220px] mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
         <div>
           <img
-            loading="loader"
             src={logo}
-            alt="Logo"
-            className="max-w-[100px] w-full h-auto"
+            alt="Clinic Go logo"
+            decoding="async"
+            fetchPriority="high"
+            width="128"
+            height="128"
+            className="w-20 sm:w-24 md:w-28 lg:w-32 h-auto object-contain"
           />
+
           <p className="text-gray-700">
             O‘zbekiston uchun innovatsion tez yordam platformasi.
           </p>
